@@ -1,0 +1,57 @@
+.l-header {
+    grid-area: my-header;
+}
+.l-nav {
+    grid-area: my-nav;
+}
+.l-main {
+    grid-area: my-main;
+     max-height: 80px;
+      overflow-y: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+}
+.l-aside {
+    grid-area: my-aside;
+         max-height: 25px;
+      overflow-y: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+}
+.l-section {
+    grid-area: my-section;
+             max-height: 25px;
+      overflow-y: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+}
+.l-footer {
+    grid-area: my-footer;
+}
+
+.box-init {
+    font-size: larger; 
+    color: #fff; 
+    border-radius: 5px; 
+    background-color: #2196f3; 
+    border: 1px solid black; 
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid; /* устанавливает элемент как контейнер сетки */
+    grid-gap: 10px; /* задает отступ между строками и колонками сетки */
+    grid-template-areas: /*  каким образом элементы внутри сетки будут размещены визуально */
+        "my-header my-header my-header"
+        "my-aside my-main my-nav"
+        "my-section  my-main my-nav"
+        "my-footer my-footer my-footer";
+
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
